@@ -134,7 +134,7 @@ for i in range(15,16):
     url="https://www.zhipin.com/c101020100-p100101/?page=%d&ka=page-%d" % (i,i)
     print url
     
-    proxy_on=0
+    proxy_on=1
     if(i%5>=4):
         proxy_on=(proxy_on+1)%2
     print "proxy on:%d" % (proxy_on)
@@ -142,7 +142,7 @@ for i in range(15,16):
     if(proxy_on==1):
         #set proxy
         proxy_list=['217.182.76.151:54566','191.22.216.122:8080','209.9.104.10:80']
-        proxy={"https":"41.203.183.50:8080"}
+        proxy={"https":"181.113.70.140:53281"}
         #proxy_s=urllib2.ProxyHandler({"https":random.choice(proxy_list)})
         proxy_s=urllib2.ProxyHandler(proxy)
         opener=urllib2.build_opener(proxy_s)
